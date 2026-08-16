@@ -1,0 +1,7 @@
+{
+  "name": "DSJaymeBSIT211",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
