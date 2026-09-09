@@ -1,0 +1,25 @@
+.movie-item {
+  --inner-padding-end: 12px;
+  --padding-start: 0;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.movie-thumbnail {
+  --size: 110px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 12px;
+}
+
+.movie-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ion-label h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}

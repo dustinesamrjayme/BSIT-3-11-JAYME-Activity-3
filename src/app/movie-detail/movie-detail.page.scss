@@ -1,0 +1,52 @@
+.movie-banner {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 18px;
+}
+
+.movie-meta {
+  margin-bottom: 18px;
+
+  h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  p {
+    margin: 6px 0 0;
+    color: #666;
+    font-size: 1rem;
+  }
+}
+
+.synopsis {
+  margin-bottom: 20px;
+
+  p {
+    margin: 0;
+    line-height: 1.6;
+    color: #444;
+  }
+}
+
+.gallery-block h3 {
+  margin-bottom: 12px;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.gallery-row img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}

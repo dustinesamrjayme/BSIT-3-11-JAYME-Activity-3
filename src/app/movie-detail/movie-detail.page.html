@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/featured"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Movie Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="movie" class="ion-padding">
+  <img [src]="movie.banner" [alt]="movie.title" class="movie-banner" />
+
+  <div class="movie-meta">
+    <h2>{{ movie.title }}</h2>
+    <p>{{ movie.genre }}</p>
+  </div>
+
+  <div class="synopsis">
+    <p>{{ movie.synopsis }}</p>
+  </div>
+
+  <div class="gallery-block">
+    <h3>Movie gallery</h3>
+    <div class="gallery-row">
+      <img *ngFor="let image of movie.gallery" [src]="image" [alt]="movie.title" />
+    </div>
+  </div>
+</ion-content>

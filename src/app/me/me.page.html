@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Me</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="me" class="ion-padding">
+  <div class="profile-header">
+    <img [src]="me.image" [alt]="me.name" class="profile-image" />
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Name</ion-label>
+      <ion-note>{{ me.name }}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Username</ion-label>
+      <ion-note>{{ me.username }}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-note>{{ me.email }}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Address</ion-label>
+      <ion-note>{{ me.address }}</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

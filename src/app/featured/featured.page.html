@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Feature Movies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item
+      *ngFor="let movie of movies"
+      button
+      detail="false"
+      [routerLink]="['/tabs/featured/movie-detail', movie.id]"
+      class="movie-item"
+    >
+      <ion-thumbnail slot="start" class="movie-thumbnail">
+        <img [src]="movie.banner" [alt]="movie.title">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ movie.title }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

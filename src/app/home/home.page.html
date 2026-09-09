@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="page-header">
+    <h2>Welcome back</h2>
+  </div>
+
+  <ion-searchbar
+    [(ngModel)]="searchTerm"
+    (ionInput)="onSearchInput()"
+    placeholder="Search Movie"
+    animated="true">
+  </ion-searchbar>
+
+  <ion-list *ngIf="movies.length > 0; else noResults">
+    <ion-item *ngFor="let movie of movies" [routerLink]="['/tabs/featured/movie-detail', movie.id]">
+      <ion-label>{{ movie.title }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #noResults>
+    <ion-item lines="none">
+      <ion-label color="medium">No movies found</ion-label>
+    </ion-item>
+  </ng-template>
+</ion-content>
